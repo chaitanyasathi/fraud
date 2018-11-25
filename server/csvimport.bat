@@ -1,0 +1,1 @@
+mongoimport --host localhost:27018 FraudDB -c fraud --type csv --file fraud.csv --headerline
