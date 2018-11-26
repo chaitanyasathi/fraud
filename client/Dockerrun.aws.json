@@ -1,0 +1,30 @@
+{
+    "AWSEBDockerrunVerizon" : 2,
+    "containerDefinitions" : [
+        {
+            "name": "client",
+            "image": "sekchaitanya/fraud-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "sekchaitanya/fraud-server",
+            "hostname": "api",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "sekchaitanya/fraud-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links" : ["client","server"]
+        }        
+    ]
+}
