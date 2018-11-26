@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Plot from "react-plotly.js";
 import Table from "./Table";
 import Plotly from "./Plotly";
+import Plot3d from "./Plotly3d";
 import { Grid, Row, Col, Clearfix, Button, Panel } from "react-bootstrap";
 
 class App extends Component {
