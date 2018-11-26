@@ -38,6 +38,8 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./client
+    environment:
+      - CHOKIDAR_USEPOLLING=true       
     volumes:
       - /app/node_modules
       - ./client:/app
