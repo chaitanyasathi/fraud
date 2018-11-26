@@ -13,9 +13,9 @@ after_success:
   - docker build -t sekchaitanya88/fraud-nginx ./nginx
   - docker build -t sekchaitanya88/fraud-server ./server 
 
-# Log in to the docker CLI
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-# Take those images and push them to docker hub
-- docker push sekchaitanya88/fraud-client
-- docker push sekchaitanya88/fraud-server
-- docker push sekchaitanya88/fraud-nginx
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push sekchaitanya88/fraud-client
+  - docker push sekchaitanya88/fraud-server
+  - docker push sekchaitanya88/fraud-nginx
